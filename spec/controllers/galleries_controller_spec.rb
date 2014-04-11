@@ -5,8 +5,15 @@ describe GalleriesController do
 
   describe "GET index" do
     it "returns a JSON array of gallery names and urls" do
+      json = {
+        galleries: [ {
+          name: gallery.name,
+          url: gallery_path(gallery),
+          exhibitions: gallery_exhibitions_path(gallery)
+        } ]
+      }.to_json
       get :index
-      response.body.should eq({galleries: [ {name: gallery.name, url: gallery_path(gallery)} ]}.to_json)
+      response.body.should eq json
     end
   end
 
