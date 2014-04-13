@@ -6,8 +6,8 @@ class CreateExhibitions < ActiveRecord::Migration
       t.text :description
       t.integer :entry_fee
       t.integer :max_tickets
-      t.datetime :opens_on
-      t.datetime :closes_on
+      t.date :opens_on
+      t.date :closes_on
 
       t.timestamps
     end

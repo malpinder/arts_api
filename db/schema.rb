@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20140411175256) do
     t.text     "description"
     t.integer  "entry_fee"
     t.integer  "max_tickets"
-    t.datetime "opens_on"
-    t.datetime "closes_on"
+    t.date     "opens_on"
+    t.date     "closes_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

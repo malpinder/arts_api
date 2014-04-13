@@ -7,7 +7,7 @@ FactoryGirl.define do
     description "An incredible exhibition"
     entry_fee 100
     max_tickets 10
-    opens_on "2014-04-11 17:33:54"
-    closes_on "2014-04-11 17:33:54"
+    opens_on "2014-04-11"
+    closes_on "2014-10-11"
   end
 end
