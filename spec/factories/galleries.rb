@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :gallery do
-    name "MyString"
-    description ""
-    address "MyText"
+    name "A Gallery"
+    description "A fabulous gallery"
+    address "123 Street"
     opening_hour 9
     closing_hour 16
   end

@@ -20,8 +20,17 @@ describe ExhibitionsController do
 
   describe "GET show" do
     it "returns the exhibition as JSON" do
+      json = {
+        id: exhibition.id,
+        name: exhibition.name,
+        description: exhibition.description,
+        entry_fee: "£1.00",
+        available_tickets: 10,
+        gallery_name: "A Gallery",
+        gallery_url: gallery_path(exhibition.gallery)
+      }.to_json
       get :show, :id => exhibition.to_param
-      response.body.should eq(exhibition.to_json)
+      response.body.should eq(json)
     end
   end
 

@@ -6,7 +6,8 @@ class ExhibitionsController < ApplicationController
   end
 
   def show
-    render json: Exhibition.find(params[:id])
+    exhibition = Exhibition.find(params[:id])
+    render json: ExhibitionPresenter.new(exhibition).show_attributes
   end
 
 end
