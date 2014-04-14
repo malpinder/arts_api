@@ -27,6 +27,8 @@ describe ExhibitionsController do
         description: exhibition.description,
         entry_fee: "£1.00",
         available_tickets: 10,
+        opens_on: exhibition.opens_on,
+        closes_on: exhibition.closes_on,
         gallery_name: "A Gallery",
         gallery_url: gallery_path(exhibition.gallery)
       }.to_json

@@ -31,6 +31,8 @@ class ExhibitionPresenter
       description: @exhibition.description,
       entry_fee: number_to_currency(@exhibition.entry_fee/100.0, unit: '£'),
       available_tickets: @exhibition.available_tickets,
+      opens_on: @exhibition.opens_on,
+      closes_on: @exhibition.closes_on,
       gallery_name: @gallery.name,
       gallery_url: gallery_path(@gallery)
     }
