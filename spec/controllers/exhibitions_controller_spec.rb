@@ -7,6 +7,7 @@ describe ExhibitionsController do
     it "returns a JSON array of exhibition names and urls" do
       json = {
         exhibitions: [ {
+          id: exhibition.id,
           name: exhibition.name,
           gallery_name: exhibition.gallery.name,
           url: exhibition_path(exhibition),

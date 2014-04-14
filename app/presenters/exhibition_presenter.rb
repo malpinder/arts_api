@@ -16,6 +16,7 @@ class ExhibitionPresenter
 
   def index_attributes
     {
+      id: @exhibition.id,
       name: @exhibition.name,
       gallery_name: @gallery.name,
       url: exhibition_path(@exhibition),

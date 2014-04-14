@@ -7,6 +7,7 @@ describe GalleriesController do
     it "returns a JSON array of gallery names and urls" do
       json = {
         galleries: [ {
+          id: gallery.id,
           name: gallery.name,
           url: gallery_path(gallery),
           exhibitions: gallery_exhibitions_path(gallery)
