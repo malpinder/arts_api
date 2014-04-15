@@ -10,8 +10,9 @@ class TicketsController < ApplicationController
   end
 
   def destroy
-    Ticket.find(params[:id]).destroy
-    head :blank
+    ticket = Ticket.where(id: params[:id]).first
+    ticket.destroy if ticket
+    render json: {}
   end
 
   private

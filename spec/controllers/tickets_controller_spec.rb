@@ -36,12 +36,6 @@ describe TicketsController do
         delete :destroy, {:id => ticket.to_param}
       }.to change(Ticket, :count).by(-1)
     end
-
-    it "renders nothing" do
-      ticket = Ticket.create! valid_attributes
-      delete :destroy, {:id => ticket.to_param}
-      response.body.should be_blank
-    end
   end
 
 end
